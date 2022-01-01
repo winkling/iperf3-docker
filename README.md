@@ -11,5 +11,5 @@ docker run -d -p 5201:5201 --restart always --name iperf3-srv iperf3 -s
 # Run as Client (first get server IP address):
 ```
 docker inspect --format "{{ .NetworkSettings.IPAddress }}" iperf3-srv
-docker run  -it --rm networkstatic/iperf3 -c <SERVER_IP>
+docker run  -it --rm iperf3 -c <SERVER_IP>
 ```
